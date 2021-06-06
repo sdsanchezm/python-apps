@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+
+        <form>
+            <div class="form-group">
+                <label for="username">username</label>
+                <input type="text" name="username" class="form-control" id="username" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="username" />
+                <small id="emailHelp" class="form-text text-warning">Do not never share it.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <hr>
+
+        <form>
+            <div class="form-group">
+                <label for="Time"></label>
+                <small id="helpId" class="text-muted">Help text</small>
+            </div>
+            <button class="btn btn-success">Start</button>
+            <button class="btn btn-danger">Stop</button>
+        </form>
+
+
+
+    </div> <!-- /container -->
+
+{%- endblock  %}
+=======
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>form test</h1>
+
+      <form action="/a" method="POST">
+        <input id="username" name="username" placeholder="username" type="text" />
+        <button type="submit">Submit</button>
+      </form>
+
+  </body>
+</html>
+>>>>>>> a09c254de1cb24b6ddfb9c4ab9cd2046d77c6b5e

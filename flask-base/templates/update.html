@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Update Task</h1>
+
+    <form action="/update/{{task.id}}" method="POST" class="pure-form pure-form-aligned">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="aligned-name">Task</label>
+                <input type="text" name="content" id="content" value="{{task.content}}" />
+                <button type="submit" class="pure-button pure-button-primary">Update Task</button>
+                <!-- <input type="submit" value="Update Task" /> -->
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Register</title>
+{% endblock %}
+
+{% block body %}
+
+
+<p>
+    Please register a new user
+</p>
+
+
+    <form class="pure-form pure-form-aligned" method="POST">
+        <fieldset class="pure-group">
+            <input type="email" name="email" class="pure-input-1-2" placeholder="email" />
+            <input type="password" name="password" class="pure-input-1-2" placeholder="Password" />
+        </fieldset>
+        <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
+    </form>
+    <p>
+        <a href="register">register</a>
+        <a href="login">login</a>
+    </p>
+
+{% endblock %}

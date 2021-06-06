@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h3 class="title">Register here</h3>
+    
+
+            
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ messages[0] }} Go to <a href="{{ url_for('auth.login') }}">login page</a>.
+                    </div>
+                {% endif %}
+                {% endwith %}
+                <form action="/signup" method="POST">
+
+                    <div class="form-group row">
+
+                        <label for="Email" class="col-sm-2 col-form-label">Email</label>
+
+                        <div class="col-sm-10">
+                            <input class="form-control" type="email" name="email" placeholder="Email" autofocus="">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="user" class="col-sm-2 col-form-label">user</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" name="name" placeholder="Name" autofocus="">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="password" name="password" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-5 col-form-label">Token</label>
+                        <div class="col-sm-5">
+                            <input class="form-control form-control-sm" type="token" name="token" placeholder="token">
+                        </div>
+                    </div>
+
+                </form>
+            
+
+
+
+{% endblock %}

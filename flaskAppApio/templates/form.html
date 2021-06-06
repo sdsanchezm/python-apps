@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Simple Form</h1>
+
+<!-- 
+      <form class="form-inline" action="/form" method="POST">
+        <div class="form-group mb-2">
+            <label class="sr-only" forname="Keyword" >Keyword</label>
+            <input class="form-control-plaintext" id="keyword" name="keyword" type="text" />
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+-->
+      <hr>
+
+      <form class="form-inline" action="/app4" method="POST">
+            <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Keyword</div>
+                  </div>
+                  <input class="form-control" type="text" name="keywordn" id="keywordi" placeholder="keywordp">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      </form>
+
+
+      {% if keywords_list|length < 1 %}
+      <p>
+        No records yet.
+      </p>
+      {% else %}
+
+      <table class="table talble-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">keyword</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for xy in keywords_list %}
+            <tr>
+                  <td>{{ xy.id }}</td>
+                  <td>{{ xy.kw1_name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+      {% endif %}
+
+
+{% endblock %}
